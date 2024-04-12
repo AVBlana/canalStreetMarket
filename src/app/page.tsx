@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>How 'bout these nuts?</div>
+      <div className={styles.center}>How 'bout these nuts?????</div>
 
       <div className={styles.grid}>
         <a
