@@ -1,0 +1,34 @@
+/* AccordionPanel.css */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  width: 5%; /* Adjust the width based on the number of panels you want in a single row */
+  background-color: inherit;
+  transition: width 0.5s ease; /* Apply transition to width for smooth animation */
+}
+
+.panel-content {
+  transform: rotate(90deg);
+  transform-origin: 0;
+  transition: transform 1s ease; /* Apply transition to transform for smooth rotation */
+}
+
+.panel.active {
+  width: 90%; /* Expand the panel width when active */
+}
+
+.panel.active .panel-content {
+  transform: rotate(0deg); /* Rotate the text to display it horizontally */
+}
+
+.panel-details {
+  display: none; /* Initially hide additional panel content */
+}
+
+.panel.active .panel-details {
+  display: block; /* Display additional panel content when active */
+}

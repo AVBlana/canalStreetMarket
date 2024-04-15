@@ -17,17 +17,24 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: black;
+  overflow-x: hidden;
+  background-color: #faf7ee;
+  cursor: none;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+#cursor-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #faf7ee;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
