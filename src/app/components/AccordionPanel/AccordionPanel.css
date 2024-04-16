@@ -5,24 +5,55 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
-  width: 5%; /* Adjust the width based on the number of panels you want in a single row */
+  min-height: 100px; /* Adjust the minimum height of the panel */
+  width: 60px;
+  min-width: 60px; /* Adjust the width based on the number of panels you want in a single row */
   background-color: inherit;
   transition: width 0.5s ease; /* Apply transition to width for smooth animation */
+  padding: 10px;
 }
 
-.panel-content {
+.panel-title {
   transform: rotate(90deg);
-  transform-origin: 0;
   transition: transform 1s ease; /* Apply transition to transform for smooth rotation */
 }
 
 .panel.active {
-  width: 90%; /* Expand the panel width when active */
+  width: 100%; /* Expand the panel width when active */
 }
 
-.panel.active .panel-content {
+.panel.active .panel-title {
   transform: rotate(0deg); /* Rotate the text to display it horizontally */
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Full width for the header */
+}
+
+.panel-icon {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.panel-title {
+  font-size: 18px;
+}
+
+.active-header {
+}
+
+.inactive-header {
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  justify-content: space-between;
+  padding: 60px 5px;
+  align-items: center;
+  margin-bottom: 350px;
 }
 
 .panel-details {

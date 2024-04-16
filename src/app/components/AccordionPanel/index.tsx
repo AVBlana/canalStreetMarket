@@ -5,16 +5,20 @@ import "./AccordionPanel.css";
 
 interface AccordionPanelProps {
   title: string;
+  icon: string;
   isActive: boolean;
   onClick: () => void;
   backgroundColor: string;
+  children: React.ReactNode;
 }
 
 const AccordionPanel: React.FC<AccordionPanelProps> = ({
   title,
+  icon,
   isActive,
   onClick,
   backgroundColor,
+  children,
 }) => {
   return (
     <div
@@ -22,11 +26,20 @@ const AccordionPanel: React.FC<AccordionPanelProps> = ({
       style={{ backgroundColor }}
       onClick={onClick}
     >
-      <p className="panel-content">{title}</p>
+      <div
+        className={`panel-header ${
+          isActive ? "active-header" : "inactive-header"
+        }`}
+      >
+        <p className="panel-icon">{icon}</p>
+        <p className="panel-title">{title}</p>
+      </div>
+
       {isActive && (
         <div className="panel-details">
           {/* Place additional content here when panel is active */}
           {/* Example: <p>Additional Content</p> */}
+          {children}
         </div>
       )}
     </div>
