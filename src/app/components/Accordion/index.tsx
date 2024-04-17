@@ -7,14 +7,22 @@ import ContentHome from "../ContentHome";
 import ContentFood from "../ContentFood";
 import ContentRetail from "../ContentRetail";
 import ContentCommunity from "../ContentCommunity";
+import { LogoIcon } from "../LogoIcon";
+
+interface PanelItem {
+  title: string;
+  icon: string | React.ReactElement; // Icon can be a string or a React element
+  backgroundColor: string;
+  contentComponent: React.ReactElement;
+}
 
 const Accordion: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
-  const panels = [
+  const panels: PanelItem[] = [
     {
       title: "Home",
-      icon: "文化",
+      icon: <LogoIcon size={activeIndex === 0 ? 60 : 40} />,
       backgroundColor: "#fff",
       contentComponent: <ContentHome />,
     },
@@ -43,7 +51,7 @@ const Accordion: React.FC = () => {
   };
 
   return (
-    <div className="outer flex h-screen overflow-x-scroll">
+    <div className="outer flex min-h-screen">
       {panels.map((panel, index) => (
         <AccordionPanel
           key={index}
@@ -54,7 +62,6 @@ const Accordion: React.FC = () => {
           onClick={() => handleClick(index)}
         >
           {panel.contentComponent}
-          {/* Pass dynamic content as children to AccordionPanel */}
         </AccordionPanel>
       ))}
     </div>

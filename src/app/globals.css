@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.cdnfonts.com/css/apercu-mono-pro");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.apercu-mono {
+  font-family: "Apercu Mono Pro", sans-serif;
+  font-weight: 300;
+}
+
+.newsreader-semibold {
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,8 +44,8 @@ body {
 }
 
 #cursor-circle {
-  width: 28px;
-  height: 28px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background-color: #faf7ee;
   position: absolute;

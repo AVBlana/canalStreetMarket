@@ -5,6 +5,7 @@ import "./globals.css";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["500"] });
 const inter = Inter({ subsets: ["latin"] });
+const apercuMonoPro = { fontFamily: "Apercu Mono Pro, monospace" };
 
 export const metadata: Metadata = {
   title: "Canal Street Market",

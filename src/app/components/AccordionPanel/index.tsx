@@ -5,10 +5,10 @@ import "./AccordionPanel.css";
 
 interface AccordionPanelProps {
   title: string;
-  icon: string;
+  icon: string | React.ReactElement; // Update to accept string or ReactElement
+  backgroundColor: string;
   isActive: boolean;
   onClick: () => void;
-  backgroundColor: string;
   children: React.ReactNode;
 }
 

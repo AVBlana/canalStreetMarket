@@ -10,7 +10,6 @@
   min-width: 60px; /* Adjust the width based on the number of panels you want in a single row */
   background-color: inherit;
   transition: width 0.5s ease; /* Apply transition to width for smooth animation */
-  padding: 10px;
 }
 
 .panel-title {
@@ -40,10 +39,16 @@
 }
 
 .panel-title {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .active-header {
+  justify-content: start;
+  padding-left: 60px;
+  padding-top: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .inactive-header {
@@ -61,5 +66,5 @@
 }
 
 .panel.active .panel-details {
-  display: block; /* Display additional panel content when active */
+  display: flex; /* Display additional panel content when active */
 }
