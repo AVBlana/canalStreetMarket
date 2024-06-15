@@ -16,7 +16,7 @@ const ContentRetail = () => {
               src="/assets/photoRetail.jpg"
               alt="Food Market"
               fill
-              objectgFit="cover"
+              objectFit="cover"
             />
           </div>
         </div>
