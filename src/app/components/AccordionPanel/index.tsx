@@ -5,7 +5,7 @@ import "./AccordionPanel.css";
 
 interface AccordionPanelProps {
   title: string;
-  icon: string | React.ReactElement; // Update to accept string or ReactElement
+  icon: string | React.ReactElement;
   backgroundColor: string;
   isActive: boolean;
   onClick: () => void;
@@ -35,13 +35,7 @@ const AccordionPanel: React.FC<AccordionPanelProps> = ({
         <p className="panel-title">{title}</p>
       </div>
 
-      {isActive && (
-        <div className="panel-details">
-          {/* Place additional content here when panel is active */}
-          {/* Example: <p>Additional Content</p> */}
-          {children}
-        </div>
-      )}
+      {isActive && <div className="panel-details">{children}</div>}
     </div>
   );
 };

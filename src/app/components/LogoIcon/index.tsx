@@ -4,7 +4,7 @@ export const LogoIcon = (props: SVGIconProps) => {
   return (
     <SvgIcon viewBox="0 0 60 60" {...props}>
       <defs></defs>
-      <g id="R2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="R2" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="1440_HP_v2-1" transform="translate(-60.000000, -60.000000)">
           <g id="Group-46" transform="translate(60.000000, 60.000000)">
             <g id="Group-3" transform="translate(0.000000, 0.304186)">

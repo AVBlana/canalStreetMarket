@@ -11,7 +11,7 @@ import { LogoIcon } from "../LogoIcon";
 
 interface PanelItem {
   title: string;
-  icon: string | React.ReactElement; // Icon can be a string or a React element
+  icon: string | React.ReactElement;
   backgroundColor: string;
   contentComponent: React.ReactElement;
 }
